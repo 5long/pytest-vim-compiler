@@ -1,0 +1,22 @@
+# Pytest Vim Compiler
+
+`:compiler pytest` for your Vim.
+
+## Installation
+
+* Download stable version at vim.org: [pytest-compiler]
+* Or, use a [plugin manager] and install from
+  <https://github.com/5long/pytest-vim-compiler>
+
+## Usage
+
+Just execute `:compiler pytest` and you're done.
+Well, no. You're gonna need one of the following:
+
+* plain `:make`. see [Vim docs for more][doc make]
+* [MakeGreen](https://github.com/reinh/vim-makegreen)
+* [dispatch.vim](https://github.com/tpope/vim-dispatch)
+
+[pytest-compiler]: http://www.vim.org/scripts/script.php?script_id=4508
+[plugin manager]: http://vim-scripts.org/vim/tools.html
+[doc make]: http://vimdoc.sourceforge.net/htmldoc/usr_30.html#30.1
