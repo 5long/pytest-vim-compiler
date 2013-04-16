@@ -1,0 +1,12 @@
+### v0.3.0 2013-04-16
+
+* Ignore unparsed lines. 
+  This is what other compilers do and I'm just blindly copying
+
+### v0.2.0 2013-04-09
+
+* Fix jump position for error result. i.e. non-assert failure
+
+### v0.1.0 2013-04-07
+
+* Initial attempt
