@@ -16,7 +16,7 @@ endif
 let s:cpo_save = &cpo
 set cpo-=C
 
-CompilerSet makeprg=py.test\ --tb=short
+CompilerSet makeprg=py.test\ --tb=short\ -q
 
 CompilerSet errorformat=
   \%A%*[_]%.%#,
