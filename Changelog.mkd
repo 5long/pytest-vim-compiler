@@ -1,3 +1,7 @@
+### v0.5.1 2013-07-20
+
+* Remove underscores from header message
+
 ### v0.5.0 2013-07-20
 
 * Don't specify messages as error
