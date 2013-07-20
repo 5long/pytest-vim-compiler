@@ -20,7 +20,7 @@ CompilerSet makeprg=py.test\ --tb=short\ -q
 
 CompilerSet errorformat=
   \%+G%*[_]\ %m\ %*[_],
-  \%E%>%f:%l:\ %.%#,
+  \%A%>%f:%l:\ %.%#,
   \%-Z>%*[\ ]%m,
   \%-G%.%#
 
