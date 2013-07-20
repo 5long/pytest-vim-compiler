@@ -2,7 +2,6 @@
 " Compiler: Py.test <http://pytest.org/>
 " Maintainer: Whyme Lyu <5longluna at gmail.com>
 " URL: https://github.com/5long/pytest-vim-compiler
-" Version: 0.5.0
 
 if exists("current_compiler")
   finish
