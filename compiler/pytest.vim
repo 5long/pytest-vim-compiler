@@ -18,7 +18,7 @@ set cpo-=C
 CompilerSet makeprg=py.test\ --tb=short\ -q
 
 CompilerSet errorformat=
-  \%+G%*[_]\ %m\ %*[_],
+  \%*[_]\ %m\ %*[_],
   \%A%>%f:%l:\ %.%#,
   \%-Z>%*[\ ]%m,
   \%-G%.%#
