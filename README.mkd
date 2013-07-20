@@ -17,6 +17,10 @@ Well, no. You're gonna need one of the following:
 * [MakeGreen](https://github.com/reinh/vim-makegreen)
 * [dispatch.vim](https://github.com/tpope/vim-dispatch)
 
+## License
+
+MIT Licensed. See file LICENSE.
+
 [pytest-compiler]: http://www.vim.org/scripts/script.php?script_id=4508
 [plugin manager]: http://vim-scripts.org/vim/tools.html
 [doc make]: http://vimdoc.sourceforge.net/htmldoc/usr_30.html#30.1
