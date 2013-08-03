@@ -1,3 +1,7 @@
+### v0.6.0 2013-08-03
+
+* Include detailed multi-line error message as plain message
+
 ### v0.5.1 2013-07-20
 
 * Remove underscores from header message
