@@ -1,6 +1,9 @@
 require 'rake/clean'
 
-FILES_TO_RELEASE = FileList['compiler/pytest.vim']
+FILES_TO_RELEASE = FileList[%w[
+  compiler/pytest.vim
+  LICENSE
+]]
 CLOBBER << FileList['pytest-compiler-*.zip']
 
 desc "Generate .zip package to upload to vim.org"
