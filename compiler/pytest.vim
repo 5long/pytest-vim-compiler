@@ -2,6 +2,8 @@
 " Compiler: Py.test <http://pytest.org/>
 " Maintainer: Whyme Lyu <5longluna at gmail.com>
 " URL: https://github.com/5long/pytest-vim-compiler
+" Last change  by: Arthur Jaron <hifreeo@gmail.com>
+" Last change: 30.11.2013
 
 if exists("current_compiler")
   finish
@@ -18,11 +20,17 @@ set cpo-=C
 CompilerSet makeprg=py.test\ --tb=short\ -q
 
 CompilerSet errorformat=
-  \%*[_]\ %m\ %*[_],
-  \%A%>%f:%l:\ %.%#,
-  \%-Z>%*[\ ]%m,
-  \E%m,
-  \%-G%.%#
+    \%-G%.%#FF%.%#,
+    \%-G=%#\ FAILURES\ =%#,
+    \%A_%#\ %m\ _%#,
+    \%C%f:%l:%.%#,
+    \%C>\ %#self%.%m,
+    \%C>\ %#%m,
+    \%ZE\ %#%m,
+    \%-G%.%#seconds%.%#
+
+" Default unittest assertion always contain "self.", which can easily be
+" stripped for a clearer (shorter) quickfix output.
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
