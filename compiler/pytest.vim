@@ -9,9 +9,9 @@ if exists("current_compiler")
   finish
 endif
 
-if has("python3") && has("python2")
+if has("python3") && has("python")
   CompilerSet makeprg=py.test-3.4\ --tb=short\ -q
-elseif !has("python3") && has("python2")
+elseif !has("python3") && has("python")
   CompilerSet makeprg=py.test-2.7\ --tb=short\ -q
 endif
 
