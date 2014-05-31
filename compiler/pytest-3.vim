@@ -8,7 +8,7 @@
 if exists("current_compiler")
   finish
 endif
-let current_compiler = "pytest"
+let current_compiler = "pytest-3"
 
 if exists(":CompilerSet") != 2 " older Vim always used :setlocal
   command -nargs=* CompilerSet setlocal <args>
@@ -17,7 +17,7 @@ endif
 let s:cpo_save = &cpo
 set cpo-=C
 
-CompilerSet makeprg=py.test\ --tb=short\ -q
+CompilerSet makeprg=py.test-3.3\ --tb=short\ -q
 
 CompilerSet errorformat=
     \%-G%.%#FF%.%#,
@@ -27,7 +27,8 @@ CompilerSet errorformat=
     \%C>\ %#self%.%m,
     \%C>\ %#%m,
     \%ZE\ %#%m,
-    \%-G%.%#seconds%.%#
+    \%-G%.%#seconds%.%#,
+    \%-G%.%#
 
 " Default unittest assertion always contain "self.", which can easily be
 " stripped for a clearer (shorter) quickfix output.
