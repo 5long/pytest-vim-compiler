@@ -1,3 +1,8 @@
+### v0.7.0 2020-02-07
+
+* Updated the pytest command and fixed the color bug.
+* Added additional arguments support.
+
 ### v0.6.0 2013-08-03
 
 * Include detailed multi-line error message as plain message

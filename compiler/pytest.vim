@@ -15,7 +15,12 @@ endif
 let s:cpo_save = &cpo
 set cpo-=C
 
-CompilerSet makeprg=pytest\ --color=no\ --tb=short\ -q
+let s:compiler_set = "CompilerSet makeprg=pytest\\ --color=no\\ --tb=short\\ -q"
+if exists('g:pytest_compiler_args')
+  let s:args = substitute(g:pytest_compiler_args, " ", "\\\\ ", "g")
+  let s:compiler_set .= "\\ " . s:args
+endif
+execute s:compiler_set
 
 CompilerSet errorformat=
       \%-G=%#\ ERRORS\ =%#,
