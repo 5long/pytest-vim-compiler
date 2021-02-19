@@ -6,16 +6,47 @@
 
 * Download stable version at vim.org: [pytest-compiler]
 * Or, use a [plugin manager] and install from
-  <https://github.com/5long/pytest-vim-compiler>
+  <https://github.com/5long/pytest-vim-compiler>.
+  For example, with [vim-plug]:
+
+```vim
+Plug '5long/pytest-vim-compiler'
+```
 
 ## Usage
 
 Just execute `:compiler pytest` and you're done.
-Well, no. You're gonna need one of the following:
+Well, no. You're going to need one of the following:
 
-* plain `:make`. see [Vim docs for more][doc make]
+* plain `:make`. See [Vim docs for more][doc make]
 * [MakeGreen](https://github.com/reinh/vim-makegreen)
 * [dispatch.vim](https://github.com/tpope/vim-dispatch)
+
+## Configuration
+
+|           Name           |  type  | Default |
+|--------------------------|--------|---------|
+| `g:pytest_compiler_args` | string |  `""`   |
+
+If set in your vim configuration, it will always be passed to CompilerSet as
+additional arguments, saving you the trouble to manually add flags you use every
+time (for example: `--ff --junit-xml=report.xml`).
+
+You can define this at runtime as well, but you will have to call `:compiler pytest`
+again, after.
+
+Even when defined, you can still pass additional arguments with each make run.
+
+### Fixing pytest layout in Dispatch windows
+
+You'll notice that the pytest layout is broken in the quickfix window when running `:Dispatch`.
+
+To fix that, install the pytest plugin [pytest-vimqf](https://github.com/CarloDePieri/pytest-vimqf)
+and add the relative flag in your vim configuration:
+
+```vim
+let g:pytest_compiler_args = "--vim-quickfix"
+```
 
 ## License
 
@@ -23,4 +54,5 @@ MIT Licensed. See file LICENSE.
 
 [pytest-compiler]: http://www.vim.org/scripts/script.php?script_id=4508
 [plugin manager]: http://vim-scripts.org/vim/tools.html
+[vim-plug]: https://github.com/junegunn/vim-plug
 [doc make]: http://vimdoc.sourceforge.net/htmldoc/usr_30.html#30.1
